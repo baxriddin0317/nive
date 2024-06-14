@@ -1,37 +1,195 @@
-import React from "react";
-import Dropdown from "./Dropdown";
-
+import React, { useState } from "react";
+import tableData from "../lib/table.json"
+import { SortIcon } from "./icons";
+ 
 const Table = () => {
+  const [restaurantSearch, setRestaurantSearch] = useState('');
+  const [neighborhoodSearch, setNeighborhoodSearch] = useState('');
+  const [cuisineSearch, setCuisineSearch] = useState('');
+  const [platformSearch, setPlatformSearch] = useState('');
+  const [daysInAdvanceSearch, setDaysInAdvanceSearch] = useState('');
+  const [timeSearch, setTimeSearch] = useState('');
 
+  const [sortConfig, setSortConfig] = useState(null);
+
+  const sortedData = [...tableData].sort((a, b) => {
+    if (!sortConfig) return 0;
+    const { key, direction } = sortConfig;
+    if (a[key] < b[key]) return direction === 'asc' ? -1 : 1;
+    if (a[key] > b[key]) return direction === 'asc' ? 1 : -1;
+    return 0;
+  });
+
+  const filteredData = sortedData.filter(item =>
+    item.restaurant.toLowerCase().includes(restaurantSearch.toLowerCase()) &&
+    item.neighborhood.toLowerCase().includes(neighborhoodSearch.toLowerCase()) &&
+    item.cuisine.toLowerCase().includes(cuisineSearch.toLowerCase()) &&
+    item.platform.toLowerCase().includes(platformSearch.toLowerCase()) &&
+    item.daysInAdvance.toString().includes(daysInAdvanceSearch) &&
+    item.time.toLowerCase().includes(timeSearch.toLowerCase())
+  );
+
+  const requestSort = (key) => {
+    let direction = 'asc';
+    if (sortConfig && sortConfig.key === key && sortConfig.direction === 'asc') {
+      direction = 'desc';
+    }
+    setSortConfig({ key, direction });
+  };
   return (
     <section className="max-w-8xl mx-auto px-4 md:px-12 relative">
       <div className="absolute top-52 left-1/2 -translate-x-1/2 -z-10 max-w-[1060px] h-[257px] w-full rounded-full bg-brand-orange blur-[250px]"></div>
       {/*  */}
       <div className="w-full h-full bg-main backdrop-blur-xl border border-brand-black-200 rounded p-3 md:p-4.5 md:pt-6">
         {/* black */}
-        <div className="w-full overflow-x-auto h-full bg-xl border border-brand-black-200 rounded p-5">
-          <div className="grid grid-cols-7 min-w-[1180px] gap-3.5">
-            {restaurants.map(res => (
-              <div key={res.id} className="flex flex-col gap-3.5 pt-2.5">
-                {/* head */}
-                <button className="flex items-center justify-between px-1.5">
-                  <span className="costum-text text-sm whitespace-nowrap">{res.head}</span>
-                  <Dropdown />
-                </button>
-                {/* inout */}
-                <div className="relative h-8 ">
-                  {res.input && <div className="w-full h-full border border-brand-black-200 bg-main rounded">
-                    <input className="absolute text-xs size-full left-2.5 right-2.5 outline-none border-none bg-transparent" type="text" placeholder={res.input.placeholder} />
-                    </div>}
-                </div>
-                {/* content */}
-                <div className="min-h-[460px] flex flex-col justify-between bg-main border border-brand-black-200 rounded py-6 px-3">
-                  {res.items.map((i,idx) => (
-                    <p key={idx} className="text-sm text-center text-nowrap">{i.item}</p>
-                  ))}
-                </div>
-              </div>
-            ))}
+        <div className="w-full overflow-auto h-full bg-xl border border-brand-black-200 rounded p-5">
+          <div className="relative max-h-[545px] overflow-auto">
+            <table className="min-w-[1180px] w-full bg-transparent">
+              <thead className="sticky top-0 !bg-brand-black-100 z-30">
+                <tr>
+                  <th className="py-3.5 px-1.5 space-y-3.5">
+                    <button className="flex w-full items-center justify-between px-1.5">
+                      <span className="costum-text text-sm whitespace-nowrap">Restaurant</span>
+                      <button onClick={() => requestSort('restaurant')}>
+                        <SortIcon />
+                      </button>
+                    </button>
+                    <div className="relative h-8 mb-3.5">
+                      <div className="w-full h-full border border-brand-black-200 bg-main rounded">
+                        <input 
+                          className="absolute text-xs size-full left-2.5 right-2.5 outline-none border-none bg-transparent" 
+                          type="text" 
+                          value={restaurantSearch}
+                          onChange={e => setRestaurantSearch(e.target.value)} 
+                          placeholder="Search..."
+                        />
+                      </div>
+                    </div>
+                  </th>
+                  <th className="py-3.5 px-1.5 space-y-3.5">
+                    <button className="flex w-full gap-2 items-center justify-between px-1.5">
+                      <span className="costum-text text-sm whitespace-nowrap">Neighborhood</span>
+                      <button onClick={() => requestSort('neighborhood')}>
+                        <SortIcon />
+                      </button>
+                    </button>
+                    <div className="relative h-8 mb-3.5">
+                      <div className="w-full h-full border border-brand-black-200 bg-main rounded">
+                        <input 
+                          className="absolute text-xs size-full left-2.5 right-2.5 outline-none border-none bg-transparent" 
+                          type="text" 
+                          value={neighborhoodSearch}
+                          onChange={e => setNeighborhoodSearch(e.target.value)}
+                          placeholder="e.g. Soho"
+                        />
+                      </div>
+                    </div>
+                  </th>
+                  <th className="py-3.5 px-1.5 space-y-3.5">
+                    <button className="flex w-full gap-2 items-center justify-between px-1.5">
+                      <span className="costum-text text-sm whitespace-nowrap">Cuisine</span>
+                      <button onClick={() => requestSort('cuisine')}>
+                        <SortIcon />
+                      </button>
+                    </button>
+                    <div className="relative h-8 mb-3.5">
+                      <div className="w-full h-full border border-brand-black-200 bg-main rounded">
+                        <input 
+                          className="absolute text-xs size-full left-2.5 right-2.5 outline-none border-none bg-transparent" 
+                          type="text" 
+                          value={cuisineSearch}
+                          onChange={e => setCuisineSearch(e.target.value)}
+                          placeholder="e.g. Italian"
+                        />
+                      </div>
+                    </div>
+                  </th>
+                  <th className="py-3.5 px-1.5 space-y-3.5">
+                    <button className="flex w-full gap-2 items-center justify-between px-1.5">
+                      <span className="costum-text text-sm whitespace-nowrap">Platform</span>
+                      <button onClick={() => requestSort('platform')}>
+                        <SortIcon />
+                      </button>
+                    </button>
+                    <div className="relative h-8 mb-3.5">
+                      <div className="w-full h-full border border-brand-black-200 bg-main rounded">
+                        <input 
+                          className="absolute text-xs size-full left-2.5 right-2.5 outline-none border-none bg-transparent" 
+                          type="text" 
+                          value={platformSearch}
+                          onChange={e => setPlatformSearch(e.target.value)}
+                          placeholder="e.g. Resy"
+                        />
+                      </div>
+                    </div>
+                  </th>
+                  <th className="py-3.5 px-1.5 space-y-3.5">
+                    <button className="flex w-full gap-2 items-center justify-between px-1.5">
+                      <span className="costum-text text-sm whitespace-nowrap">Days in Advance</span>
+                      <button onClick={() => requestSort('daysInAdvance')}>
+                        <SortIcon />
+                      </button>
+                    </button>
+                    <div className="relative h-8 mb-3.5">
+                      <div className="w-full h-full border border-brand-black-200 bg-main rounded">
+                        <input 
+                          className="absolute text-xs size-full left-2.5 right-2.5 outline-none border-none bg-transparent" 
+                          type="text" 
+                          value={daysInAdvanceSearch}
+                          onChange={e => setDaysInAdvanceSearch(e.target.value)}
+                          placeholder="e.g. Resy"
+                        />
+                      </div>
+                    </div>
+                  </th>
+                  <th className="py-3.5 px-1.5 space-y-3.5">
+                    <button className="flex w-full gap-2 items-center justify-between px-1.5">
+                      <span className="costum-text text-sm whitespace-nowrap">Time (EST)</span>
+                      <button onClick={() => requestSort('time')}>
+                        <SortIcon />
+                      </button>
+                    </button>
+                    <div className="relative h-8 mb-3.5">
+                      <div className="w-full h-full border border-brand-black-200 bg-main rounded">
+                        <input 
+                          className="absolute text-xs size-full left-2.5 right-2.5 outline-none border-none bg-transparent" 
+                          type="text" 
+                          value={timeSearch}
+                          onChange={e => setTimeSearch(e.target.value)}
+                          placeholder="e.g. Resy"
+                        />
+                      </div>
+                    </div>
+                  </th>
+                  <th className="py-3.5 px-1.5 space-y-3.5">
+                    <button className="flex w-full gap-2 items-center justify-between px-1.5">
+                      <span className="costum-text text-sm whitespace-nowrap">Latest Open RSVP</span>
+                      <button onClick={() => requestSort('latestOpenRSVP')}>
+                        <SortIcon />
+                      </button>
+                    </button>
+                    <div className="relative h-8 mb-3.5"></div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="">
+                {filteredData.map((item, index) => (
+                    <tr key={index} className="relative py-6 px-3 h-11">
+                      <td className="text-sm pl-1.5 text-nowrap">
+                        <a href="#">{item.restaurant}</a>
+                      </td>
+                      <td className="text-sm text-center text-nowrap">{item.neighborhood}</td>
+                      <td className="text-sm text-center text-nowrap">{item.cuisine}</td>
+                      <td className="text-sm text-center text-nowrap">
+                        <a href="#">{item.platform}</a>
+                      </td>
+                      <td className="text-sm text-center text-nowrap">{item.daysInAdvance}</td>
+                      <td className="text-sm text-center text-nowrap">{item.time}</td>
+                      <td className="text-sm text-center text-nowrap">{item.latestOpenRSVP}</td>
+                    </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -40,73 +198,3 @@ const Table = () => {
 };
 
 export default Table;
-
-const restaurants = [
-  {
-    id: 1,
-    head: "Restaurant",
-    input: {
-      placeholder: "Search..."
-    },
-    items: Array(10).fill({
-      item: "Restaurant Name"
-    })
-  },
-  {
-    id: 2,
-    head: "Neighborhood",
-    input: {
-      placeholder: "e.g. Soho"
-    },
-    items: Array(10).fill({
-      item: "West Village"
-    })
-  },
-  {
-    id: 3,
-    head: "Cuisine",
-    input: {
-      placeholder: "e.g. Italian"
-    },
-    items: Array(10).fill({
-      item: "Steakhouse"
-    })
-  },
-  {
-    id: 4,
-    head: "Platform",
-    input: {
-      placeholder: "e.g. Resy"
-    },
-    items: Array(10).fill({
-      item: "Resy"
-    })
-  },
-  {
-    id: 5,
-    head: "Days",
-    input: {
-      placeholder: "Min Days"
-    },
-    items: Array(10).fill({
-      item: "6"
-    })
-  },
-  {
-    id: 6,
-    head: "Time (EST)",
-    input: {
-      placeholder: "e.g. 9:00 AM"
-    },
-    items: Array(10).fill({
-      item: "9:00 AM"
-    })
-  },
-  {
-    id: 7,
-    head: "Latest Open RSVP",
-    items: Array(10).fill({
-      item: "Monday, 06/10/2024"
-    })
-  }
-]

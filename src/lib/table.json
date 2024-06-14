@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "restaurant": "4 Charles Prime Rib",
+    "neighborhood": "West Village",
+    "cuisine": "Steakhouse",
+    "platform": "Resy",
+    "daysInAdvance": 20,
+    "time": "9:00 AM",
+    "latestOpenRSVP": "Wednesday 3 July 2024"
+  },
+  {
+    "id": 2,
+    "restaurant": "Adda",
+    "neighborhood": "Long Island City",
+    "cuisine": "Indian",
+    "platform": "Resy",
+    "daysInAdvance": 29,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+    "id": 3,
+    "restaurant": "Atoboy",
+    "neighborhood": "NoMad",
+    "cuisine": "Korean",
+    "platform": "Resy",
+    "daysInAdvance": 29,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+    "id": 4,
+    "restaurant": "Au Cheval",
+    "neighborhood": "Tribeca",
+    "cuisine": "American",
+    "platform": "Resy",
+    "daysInAdvance": 13,
+    "time": "9:00 AM",
+    "latestOpenRSVP": "Wednesday 26 June 2024"
+  },
+  {
+    "id": 5,
+    "restaurant": "Balthazar",
+    "neighborhood": "Soho",
+    "cuisine": "French",
+    "platform": "Resy",
+    "daysInAdvance": 30,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Sunday 14 July 2024"
+  },
+  {
+    "id": 6,
+    "restaurant": "Bonnie's",
+    "neighborhood": "Williamsburg",
+    "cuisine": "Cantonese",
+    "platform": "Resy",
+    "daysInAdvance": 13,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Wednesday 26 June 2024"
+  },
+  {
+    "id": 7,
+    "restaurant": "Bungalow",
+    "neighborhood": "East Village",
+    "cuisine": "Indian",
+    "platform": "Resy",
+    "daysInAdvance": 14,
+    "time": "11:00 AM",
+    "latestOpenRSVP": "Thursday 27 June 2024"
+  },
+  {
+    "id": 8,
+    "restaurant": "Buvette",
+    "neighborhood": "West Village",
+    "cuisine": "French",
+    "platform": "Resy",
+    "daysInAdvance": 13,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Wednesday 26 June 2024"
+  },
+  {
+    "id": 9,
+    "restaurant": "Carbone",
+    "neighborhood": "Greenwich Village",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 30,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+    "id": 10,
+    "restaurant": "Chinese Tuxedo",
+    "neighborhood": "Chinatown",
+    "cuisine": "Chinese",
+    "platform": "Resy",
+    "daysInAdvance": 14,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Friday 28 June 2024"
+  },
+  {
+    "id": 11,
+    "restaurant": "Claud",
+    "neighborhood": "East Village",
+    "cuisine": "European",
+    "platform": "Resy",
+    "daysInAdvance": 15,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Saturday 29 June 2024"
+  },
+  {
+    "id": 12,
+    "restaurant": "Cote",
+    "neighborhood": "Chelsea",
+    "cuisine": "Korean",
+    "platform": "Resy",
+    "daysInAdvance": 29,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Friday 12 July 2024"
+  },
+  {
+    "id": 13,
+    "restaurant": "Dhamaka",
+    "neighborhood": "Lower East Side",
+    "cuisine": "Indian",
+    "platform": "Resy",
+    "daysInAdvance": 29,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+    "id": 14,
+    "restaurant": "Don Angie",
+    "neighborhood": "West Village",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 6,
+    "time": "9:00 AM",
+    "latestOpenRSVP": "Wednesday 19 June 2024"
+  },
+  {
+    "id": 15,
+    "restaurant": "Double Chicken Please",
+    "neighborhood": "Lower East Side",
+    "cuisine": "Cocktails / New American",
+    "platform": "Resy",
+    "daysInAdvance": 6,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Thursday 20 June 2024"
+  },
+  {
+    "id": 16,
+    "restaurant": "Fish Cheeks",
+    "neighborhood": "Nolita",
+    "cuisine": "Thai",
+    "platform": "Resy",
+    "daysInAdvance": 29,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+    "id": 17,
+    "restaurant": "Gage & Tollner",
+    "neighborhood": "Brooklyn",
+    "cuisine": "American",
+    "platform": "Resy",
+    "daysInAdvance": 28,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Thursday 11 July 2024"
+  },
+  {
+    "id": 18,
+    "restaurant": "I Sodi",
+    "neighborhood": "West Village",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 13,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Thursday 27 June 2024"
+  },
+  {
+    "id": 19,
+    "restaurant": "L'Artusi",
+    "neighborhood": "West Village",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 14,
+    "time": "9:00 AM",
+    "latestOpenRSVP": "Thursday 27 June 2024"
+  },
+  {
+    "id": 20,
+    "restaurant": "Laser Wolf",
+    "neighborhood": "Williamsburg",
+    "cuisine": "Israeli",
+    "platform": "Resy",
+    "daysInAdvance": 21,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Thursday 4 July 2024"
+  },
+  {
+    "id": 21,
+    "restaurant": "Lilia",
+    "neighborhood": "Williamsburg",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 28,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Thursday 11 July 2024"
+  },
+  {
+    "id": 22,
+    "restaurant": "Masalawala & Sons",
+    "neighborhood": "Park Slope",
+    "cuisine": "Indian",
+    "platform": "Resy",
+    "daysInAdvance": 14,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Friday 28 June 2024"
+  },
+  {
+    "id": 23,
+    "restaurant": "Misi",
+    "neighborhood": "Williamsburg",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 27,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Wednesday 10 July 2024"
+  },
+  {
+    "id": 24,
+    "restaurant": "Monkey Bar",
+    "neighborhood": "Midtown East",
+    "cuisine": "American",
+    "platform": "Resy",
+    "daysInAdvance": 13,
+    "time": "9:00 AM",
+    "latestOpenRSVP": "Wednesday 26 June 2024"
+  },
+  {
+    "id": 25,
+    "restaurant": "Peter Luger",
+    "neighborhood": "Williamsburg",
+    "cuisine": "Steakhouse",
+    "platform": "Resy",
+    "daysInAdvance": 30,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Sunday 14 July 2024"
+  },
+  {
+    "id": 26,
+    "restaurant": "Raoul's",
+    "neighborhood": "Greenwich Village",
+    "cuisine": "French",
+    "platform": "Resy",
+    "daysInAdvance": 30,
+    "time": "8:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+    "id": 27,
+    "restaurant": "Rezdôra",
+    "neighborhood": "Flatiron",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 29,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+    "id": 28,
+    "restaurant": "Roscioli (Tasting Menu)",
+    "neighborhood": "Soho",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 30,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+    "id": 29,
+    "restaurant": "Rubirosa",
+    "neighborhood": "Nolita",
+    "cuisine": "Italian",
+    "platform": "Resy",
+    "daysInAdvance": 7,
+    "time": "12:00 AM",
+    "latestOpenRSVP": "Friday 21 June 2024"
+  },
+  {
+    "id": 30,
+    "restaurant": "Sadelle's",
+    "neighborhood": "Soho",
+    "cuisine": "Brunch",
+    "platform": "Resy",
+    "daysInAdvance": 30,
+    "time": "10:00 AM",
+    "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+      "id": 31,  
+      "restaurant": "Semma",
+      "neighborhood": "Greenwich Village",
+      "cuisine": "South Indian",
+      "platform": "Resy",
+      "daysInAdvance": 14,
+      "time": "7:00 AM",
+      "latestOpenRSVP": "Thursday 27 June 2024"
+  },
+  {
+      "id": 32,  
+      "restaurant": "Shuka",
+      "neighborhood": "Soho",
+      "cuisine": "Mediterranean",
+      "platform": "Resy",
+      "daysInAdvance": 29,
+      "time": "12:00 AM",
+      "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+      "id": 33,  
+      "restaurant": "Sushi Nakazawa",
+      "neighborhood": "West Village",
+      "cuisine": "Sushi",
+      "platform": "Resy",
+      "daysInAdvance": 14,
+      "time": "12:00 AM",
+      "latestOpenRSVP": "Friday 28 June 2024"
+  },
+  {
+      "id": 34,  
+      "restaurant": "Tatiana",
+      "neighborhood": "Upper West Side",
+      "cuisine": "Afro-Caribbean",
+      "platform": "Resy",
+      "daysInAdvance": 27,
+      "time": "12:00 PM",
+      "latestOpenRSVP": "Wednesday 10 July 2024"
+  },
+  {
+      "id": 35,  
+      "restaurant": "Thai Diner",
+      "neighborhood": "Nolita",
+      "cuisine": "Thai",
+      "platform": "Resy",
+      "daysInAdvance": 6,
+      "time": "12:00 AM",
+      "latestOpenRSVP": "Thursday 20 June 2024"
+  },
+  {
+      "id": 36,  
+      "restaurant": "The Four Horsemen",
+      "neighborhood": "Williamsburg",
+      "cuisine": "Wine Bar",
+      "platform": "Resy",
+      "daysInAdvance": 30,
+      "time": "7:00 AM",
+      "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+      "id": 37,  
+      "restaurant": "Torrisi Bar & restaurant",
+      "neighborhood": "Nolita",
+      "cuisine": "Italian",
+      "platform": "Resy",
+      "daysInAdvance": 30,
+      "time": "10:00 AM",
+      "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+      "id": 38,  
+      "restaurant": "Una Pizza Napoletana",
+      "neighborhood": "Lower East Side",
+      "cuisine": "Pizza",
+      "platform": "Resy",
+      "daysInAdvance": 14,
+      "time": "9:00 AM",
+      "latestOpenRSVP": "Thursday 27 June 2024"
+  },
+  {
+      "id": 39,  
+      "restaurant": "Via Carota",
+      "neighborhood": "West Village",
+      "cuisine": "Italian",
+      "platform": "Resy",
+      "daysInAdvance": 30,
+      "time": "10:00 AM",
+      "latestOpenRSVP": "Saturday 13 July 2024"
+  },
+  {
+      "id": 40,  
+      "restaurant": "Zou Zou's",
+      "neighborhood": "Hudson Yards",
+      "cuisine": "Mediterranean",
+      "platform": "Open Table",
+      "daysInAdvance": 21,
+      "time": "9:00 AM",
+      "latestOpenRSVP": "Thursday 4 July 2024"
+  }
+]
