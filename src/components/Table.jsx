@@ -45,7 +45,7 @@ const Table = () => {
         <div className="w-full overflow-auto h-full bg-xl border border-brand-black-200 rounded p-5">
           <div className="relative max-h-[545px] overflow-auto">
             <table className="min-w-[1180px] w-full bg-transparent">
-              <thead className="sticky top-0 !bg-brand-black-100 z-30">
+              <thead className="sticky w-full border border-brand-black-100 top-0 !bg-brand-black-100 z-30">
                 <tr>
                   <th className="py-3.5 px-1.5 space-y-3.5">
                     <button className="flex w-full items-center justify-between px-1.5">
@@ -174,18 +174,18 @@ const Table = () => {
               </thead>
               <tbody className="">
                 {filteredData.map((item, index) => (
-                    <tr key={index} className="relative py-6 px-3 h-11">
-                      <td className="text-sm pl-1.5 text-nowrap">
+                    <tr key={index} className="relative h-11">
+                      <td className={`text-sm text-center text-nowrap relative before:absolute before:left-1/2 before:-translate-x-1/2 px-2 before:top-0 before:w-[90%] before:h-full before:bg-main ${index == 0 ? 'before:border-t before:border-x before:rounded-t' : 'before:border-x'} ${index == filteredData.length-1 && 'before:border-b before:rounded-b'} before:border-brand-black-200`}>
                         <a href="#">{item.restaurant}</a>
                       </td>
-                      <td className="text-sm text-center text-nowrap">{item.neighborhood}</td>
-                      <td className="text-sm text-center text-nowrap">{item.cuisine}</td>
-                      <td className="text-sm text-center text-nowrap">
+                      <td className={`text-sm text-center text-nowrap relative before:absolute before:left-1/2 before:-translate-x-1/2 px-2 before:top-0 before:w-[90%] before:h-full before:bg-main ${index == 0 ? 'before:border-t before:border-x before:rounded-t' : 'before:border-x'} ${index == filteredData.length-1 && 'before:border-b before:rounded-b'} before:border-brand-black-200`}>{item.neighborhood}</td>
+                      <td className={`text-sm text-center text-nowrap relative before:absolute before:left-1/2 before:-translate-x-1/2 px-2 before:top-0 before:w-[90%] before:h-full before:bg-main ${index == 0 ? 'before:border-t before:border-x before:rounded-t' : 'before:border-x'} ${index == filteredData.length-1 && 'before:border-b before:rounded-b'} before:border-brand-black-200`}>{item.cuisine}</td>
+                      <td className={`text-sm text-center text-nowrap relative before:absolute before:left-1/2 before:-translate-x-1/2 px-2 before:top-0 before:w-[90%] before:h-full before:bg-main ${index == 0 ? 'before:border-t before:border-x before:rounded-t' : 'before:border-x'} ${index == filteredData.length-1 && 'before:border-b before:rounded-b'} before:border-brand-black-200`}>
                         <a href="#">{item.platform}</a>
                       </td>
-                      <td className="text-sm text-center text-nowrap">{item.daysInAdvance}</td>
-                      <td className="text-sm text-center text-nowrap">{item.time}</td>
-                      <td className="text-sm text-center text-nowrap">{item.latestOpenRSVP}</td>
+                      <td className={`text-sm text-center text-nowrap relative before:absolute before:left-1/2 before:-translate-x-1/2 px-2 before:top-0 before:w-[90%] before:h-full before:bg-main ${index == 0 ? 'before:border-t before:border-x before:rounded-t' : 'before:border-x'} ${index == filteredData.length-1 && 'before:border-b before:rounded-b'} before:border-brand-black-200`}>{item.daysInAdvance}</td>
+                      <td className={`text-sm text-center text-nowrap relative before:absolute before:left-1/2 before:-translate-x-1/2 px-2 before:top-0 before:w-[90%] before:h-full before:bg-main ${index == 0 ? 'before:border-t before:border-x before:rounded-t' : 'before:border-x'} ${index == filteredData.length-1 && 'before:border-b before:rounded-b'} before:border-brand-black-200`}>{item.time}</td>
+                      <td className={`text-sm text-center text-nowrap relative before:absolute before:left-1/2 before:-translate-x-1/2 px-2 before:top-0 before:w-[90%] before:h-full before:bg-main ${index == 0 ? 'before:border-t before:border-x before:rounded-t' : 'before:border-x'} ${index == filteredData.length-1 && 'before:border-b before:rounded-b'} before:border-brand-black-200`}>{item.latestOpenRSVP}</td>
                     </tr>
                 ))}
               </tbody>
